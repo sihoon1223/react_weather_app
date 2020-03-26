@@ -1,0 +1,173 @@
+body {
+    color: #ffffff;
+    background: #aaaaaa;
+}
+
+#background {
+    position: relative;
+    height: 100vh;
+    background-image: url("./photo.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.header,
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 20px;
+}
+
+.header .weather {
+    text-align: center;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    text-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+}
+
+#clock {
+    font-size: 100px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    font-size: 48px;
+}
+.content .greeting {
+    position: relative;
+    left: 15px;
+    display: flex;
+    align-items: center;
+}
+.editable-name {
+    position: relative;
+}
+.editable-name:focus::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 2px solid white;
+}
+
+.todo-box {
+    display: flex;
+    justify-content: center;
+}
+
+.todo-text {
+    margin: 0 10px;
+}
+
+.content-below .remove-todo,
+.content-below .add-todo,
+.content #more {
+    position: relative;
+    margin-left: 5px;
+    top: -4px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    transition: 0.5s;
+    opacity: 0;
+    border-radius: 50%;
+    font-size: 24px;
+    text-align: center;
+    background: rgba(200, 200, 200, 0.4);
+    cursor: pointer;
+}
+.content-below:hover .remove-todo,
+.content-below:hover .add-todo,
+.content:hover #more {
+    opacity: 100;
+}
+
+.todo-box .add-todo {
+    display: none;
+}
+.todo-box.done .add-todo {
+    display: inline-flex;
+}
+.todo-box.done .remove-todo {
+    display: none;
+}
+
+.mantra {
+    display: none;
+}
+.content.show-mantra .greeting {
+    display: none;
+}
+.content.show-mantra .mantra {
+    display: block;
+}
+
+.content-below {
+    text-align: center;
+}
+#todo.show,
+#input-todo.show {
+    display: block;
+}
+#todo,
+#input-todo {
+    display: block;
+    margin-top: 40px;
+}
+#input-todo h2,
+#todo h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.todo-text {
+    font-size: 32px;
+    font-weight: bold;
+}
+.input {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 400px;
+    height: 42px;
+    font-size: 32px;
+    font-weight: bold;
+    border: 0;
+    border-bottom: 2px solid white;
+    color: #fff;
+    text-align: center;
+    background: transparent;
+}
+.input:focus {
+    outline: none;
+}
+.notice {
+    margin-top: 6px;
+}
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.footer button {
+    opacity: 0.6;
+    transition: 0.3s;
+}
+.footer button:hover {
+    opacity: 1;
+}
